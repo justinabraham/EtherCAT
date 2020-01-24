@@ -9,7 +9,7 @@ The OS was a "headless" or network install of Debian GNU/Linux 10.1.0 (buster) r
 ### Install rt patched kernel image, headers and support packages (optional)
 
 ```bash
-~/EtherCAT_iThemba/install/4_install_rt_images.sh
+~/EtherCAT/install/4_install_rt_images.sh
 ```
 
 Run this script to:
@@ -26,7 +26,7 @@ The following scripts install the dependencies, build EPICS base and support and
 ### Install dependencies
 
 ```bash
-~/EtherCAT_iThemba/install/5_install_dependencies.sh
+~/EtherCAT/install/5_install_dependencies.sh
 ```
 
 Run this script to:
@@ -38,7 +38,7 @@ Notes:
 ### Move EtherCAT master source image
 
 ```bash
-~/EtherCAT_iThemba/install/6_move_source_image.sh
+~/EtherCAT/install/6_move_source_image.sh
 ```
 
 Run this script to:
@@ -47,7 +47,7 @@ Run this script to:
 ### Build EPICS base and support
 
 ```bash
-~/EtherCAT_iThemba/install/7_build_epics_base_support.sh
+~/EtherCAT/install/7_build_epics_base_support.sh
 ```
 
 Run this script to:
@@ -59,7 +59,7 @@ Notes:
 ### Build etherlab driver
 
 ```bash
-~/EtherCAT_iThemba/install/8_build_etherlab_driver.sh
+~/EtherCAT/install/8_build_etherlab_driver.sh
 ```
 
 Run this script to:
@@ -72,7 +72,7 @@ Notes:
 ### Build bus scanner
 
 ```bash
-~/EtherCAT_iThemba/install/9_build_ethercat_bus_scanner.sh
+~/EtherCAT/install/9_build_ethercat_bus_scanner.sh
 ```
 
 Run this script to:
