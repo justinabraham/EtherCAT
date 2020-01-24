@@ -1,28 +1,10 @@
-# Installation guide for iThemba LABS EtherCAT master
-
-Table of Contents
-=================
-
-   * [Installation guide for iThemba LABS EtherCAT master](#installation-guide-for-ithemba-labs-ethercat-master)
-      * [Machine and OS configuration](#machine-and-os-configuration)
-      * [Clone repository](#clone-repository)
-      * [Machine setup scripts](#machine-setup-scripts)
-         * [Network, proxy and repository setup](#network-proxy-and-repository-setup)
-         * [User account setup](#user-account-setup)
-         * [Disable logging](#disable-logging)
-         * [Install rt patched kernel image, headers and support packages](#install-rt-patched-kernel-image-headers-and-support-packages)
-      * [EtherCAT master installation scripts](#ethercat-master-installation-scripts)
-         * [Install dependencies](#install-dependencies)
-         * [Move EtherCAT master source image](#move-ethercat-master-source-image)
-         * [Build EPICS base and support](#build-epics-base-and-support)
-         * [Build etherlab driver](#build-etherlab-driver)
-         * [Build bus scanner](#build-bus-scanner)
+# Installation guide for EtherCAT master
 
 ## Machine and OS configuration
 
 This toolchain was tested on a desktop machine with Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz and 8 GB RAM.
 
-The OS is a "headless" or network install of Debian GNU/Linux 10.1.0 (buster) running kernerl 4.19.0-6-rt-amd64 which has the PREEMPT RT patch applied.
+The OS is a "headless" or network install of Debian GNU/Linux 10.1.0 (buster) running kernerl 4.19.0-6-rt-amd64 with the PREEMPT RT patch applied.
 
 ## Clone repository
 
@@ -34,47 +16,7 @@ cd ~/EtherCAT_iThemba
 git clone --recurse-submodules https://github.com/justinabraham/EtherCAT_iThemba.git .
 ```
 
-## Machine setup scripts
-
-The following scripts are required to setup the network, proxy and account settings on a new Debian server PC installation. The assumption is that the PC will be connected to the Control Network and that the MAC of the primary NIC has been registered on the Control Network DHCP with [IT support](mailto:itsupport@tlabs.ac.za).
-
-### Network, proxy and repository setup
-
-```bash
-su -c ~/EtherCAT_iThemba/install/1_network_settings.sh
-```
-
-Run this script to:
-  - set primary NIC to DHCP and secondary NIC (for EtherCAT master) to hotplug
-  - set proxy for Control Network
-  - set apt package manager to point to local UCT Debian 10 package repository
-
-Notes:
-  - You will be prompted to enter the names of the two NICs (typically eth0 and eth1 etc.)
-  - A system reboot is required after running this script for the above settings to take effect
-
-### User account setup
-
-```bash
-su -c ~/EtherCAT_iThemba/install/2_account_settings.sh
-```
-
-Run this script to:
-  - set the user privileges for the current user
-
-Notes:
-  - You must confirm connection with the package repository
-
-### Disable logging
-
-```bash
-su -c ~/EtherCAT_iThemba/install/3_disable_logging.sh
-```
-
-Run this script to:
-  - prevent system logs from filling up the hard drive
-  
-### Install rt patched kernel image, headers and support packages
+### Install rt patched kernel image, headers and support packages (optional)
 
 ```bash
 ~/EtherCAT_iThemba/install/4_install_rt_images.sh
