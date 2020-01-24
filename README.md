@@ -4,7 +4,7 @@
 
 This toolchain was tested on a desktop machine with Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz and 8 GB RAM.
 
-The OS is a "headless" or network install of Debian GNU/Linux 10.1.0 (buster) running kernerl 4.19.0-6-rt-amd64 with the PREEMPT RT patch applied.
+The OS was a "headless" or network install of Debian GNU/Linux 10.1.0 (buster) running kernerl 4.19.0-6-rt-amd64 with the PREEMPT RT patch applied.
 
 ### Install rt patched kernel image, headers and support packages (optional)
 
