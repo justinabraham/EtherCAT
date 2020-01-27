@@ -6,6 +6,16 @@ This toolchain was tested on a desktop machine with Intel(R) Core(TM) i7-4770 CP
 
 The OS was a "headless" or network install of Debian GNU/Linux 10.1.0 (buster) running kernerl 4.19.0-6-rt-amd64 with the PREEMPT RT patch applied.
 
+## Clone repository
+
+This repository consists of install scripts and a submodule of the EtherCAT master source image. The repository must thus be checked out recursively as per instructions below.
+
+```bash
+mkdir ~/EtherCAT
+cd ~/EtherCAT
+git clone --recurse-submodules https://github.com/justinabraham/EtherCAT_iThemba.git .
+```
+
 ### Install rt patched kernel image, headers and support packages (optional)
 
 ```bash
