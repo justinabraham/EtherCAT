@@ -81,6 +81,31 @@ Run this script to:
 Notes:
   - You must confirm that the bus scanner built without errors
 
+### EtherCAT hardware chain
+
+The test IOC is setup for the following hardware chain:
+> EK1100 | EL7041 | EL7041
+
+Starting scanner
+
+```bash
+cd /epics/ethercat-4-3/iocs/xytable/
+./start_tmux_scanner
+```
+
+Starting IOC
+
+```bash
+cd /epics/ethercat-4-3/iocs/xytable/
+./start_tmux_st.cmd
+```
+
+A Control System Studio engineering opi has been provided under (_opi tested on CSS 4.1.1_)
+
+```bash
+/epics/CS-Studio/
+```
+
 
 
 
